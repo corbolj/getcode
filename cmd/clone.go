@@ -3,6 +3,7 @@ package getcode
 import (
 	getcode "github.com/corbolj/getcode/pkg"
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 var cloneCmd = &cobra.Command{
@@ -16,6 +17,15 @@ var cloneCmd = &cobra.Command{
 }
 
 func init() {
-	// Pull configs into object
+	cobra.OnInitialize(init_viper_config)
 	rootCmd.AddCommand(cloneCmd)
+}
+
+func init_viper_config() {
+
+	viper.SetConfigName(".getcode")
+	viper.AddConfigPath(".")
+	viper.AutomaticEnv()
+	err := viper.ReadInConfig()
+	getcode.ErrorCheck(err, "Error reading config file.")
 }

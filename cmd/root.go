@@ -10,10 +10,10 @@ import (
 var version = "v0.0.1"
 
 var rootCmd = &cobra.Command{
-	Use:     "turndown",
+	Use:     "getcode",
 	Version: version,
-	Short:   "getgo - to help manage cloning and migrating git versioned code.",
-	Long:    `getgo - to help manage cloning and migrating git versioned code.`,
+	Short:   "getcode - to help manage cloning and migrating git versioned code.",
+	Long:    `getcode - to help manage cloning and migrating git versioned code.`,
 	Run:     func(cmd *cobra.Command, args []string) {},
 }
 
