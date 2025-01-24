@@ -1,3 +1,5 @@
+# Cool App, but githubs cli beats thist.
+
 # getcode
 Tools designed to help manage cloning and migrating git versioned code. 
 
